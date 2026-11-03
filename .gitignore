@@ -11,9 +11,7 @@ node_modules/
 *.db-wal
 *.db-shm
 docs/assets/
-docs/build_*.mjs
-docs/export_*.py
-docs/enrich_presentation.py
-docs/simplify_presentation.py
-docs/light_cover.py
-docs/remove_note_labels.py
+docs/*.mjs
+docs/*.py
+docs/avancement-semaine-2.md
+docs/presentation-simple.md

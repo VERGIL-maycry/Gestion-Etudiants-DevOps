@@ -4,7 +4,7 @@
 - `docker compose config` : configuration valide.
 - `docker compose up --build -d` : image construite et conteneur démarré.
 - Requêtes HTTP depuis le conteneur : `/health` retourne 200 et `{"status":"ok"}` ; `/` retourne 200.
-- Aucune vérification visuelle dans un navigateur n'a été réalisée.
+- Interface consultée dans un navigateur ; captures du tableau de bord, des formulaires et des résultats.
 - CI GitHub : fichier fourni, aucune exécution distante vérifiée. Aucun dépôt GitHub ni déploiement distant créé.
 
-Les résultats sont ceux de cette session locale ; relancer les commandes avant la présentation pour disposer de preuves à jour.
+Relancer les commandes après toute modification de l'application pour vérifier son fonctionnement.

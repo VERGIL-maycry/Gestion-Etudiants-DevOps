@@ -4,3 +4,8 @@ __pycache__
 **/__pycache__
 docs
 tests
+tmp
+output
+node_modules
+.env
+*.log

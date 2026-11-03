@@ -47,4 +47,4 @@ Prototype local avec données fictives : aucun compte ni contrôle d'accès. Pas
 
 Le serveur HTTP standard convient à cette démonstration locale. Un serveur applicatif adapté, l'authentification et les autorisations sont nécessaires avant une utilisation réelle.
 
-Voir `docs/avancement-semaine-2.md` pour le support oral, le scénario de démonstration et le planning du binôme.
+Voir `docs/verification.md` pour les résultats des vérifications locales.
