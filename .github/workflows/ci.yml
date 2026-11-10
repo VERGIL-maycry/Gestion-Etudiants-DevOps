@@ -1,0 +1,27 @@
+name: Vérification de Scolarité
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Tester les parcours étudiant
+        run: python -m unittest -v
+      - name: Construire et démarrer le conteneur
+        run: docker compose up --build --detach --wait
+      - name: Vérifier le service et la page
+        run: |
+          curl --fail --silent --show-error http://127.0.0.1:8000/health
+          curl --fail --silent --show-error http://127.0.0.1:8000/ | grep -F "Registre des étudiants"
+      - name: Afficher les journaux en cas d’échec
+        if: failure()
+        run: docker compose logs
+      - name: Arrêter le conteneur
+        if: always()
+        run: docker compose down
